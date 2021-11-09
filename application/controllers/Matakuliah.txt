@@ -1,0 +1,3 @@
+untuk setting base_url ada di folder config/config.php ($config['base_url']) 
+dan di folder yang sama autoload.php ($autoload['helper'])
+dan di folder yang sama routes $route['default_controller'] yang ini untuk menampilkan halaman utama yang di atas untuk setting url
