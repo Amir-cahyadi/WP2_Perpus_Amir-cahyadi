@@ -9,7 +9,7 @@ class ModelBuku extends CI_model
 
   public function bukuWhere($where)
   {
-    // select * from buku where = ($where / kondisi yang di inginkan / di input)
+    // select * from buku where buku = (argument hasil inputan / nama buku yang di cari) 
     return $this->db->get_where('buku', $where);
   }
 
@@ -34,7 +34,7 @@ class ModelBuku extends CI_model
   // fungsi mencari total baris di mana kondisi
   public function total($field, $where)
   {
-    // select * dan tambahkan $field (parameter yang ingin di cari dan di tambahkan hasil pencarianya)
+    // select * dan tambahkan $field (/parameter yang ingin di cari dan di tambahkan hasil pencarianya)
     $this->db->select_sum($field);
     // jika tidak kosong $where dan isi $where lebih besar dari 0
     if (!empty($where) && count($where) > 0) {

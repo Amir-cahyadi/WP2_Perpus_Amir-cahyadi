@@ -10,13 +10,14 @@ class ModelUser extends Ci_Model
   // Fungsi cek data (Parameter kondisi)
   public function cekData($where = null)
   {
-    // kembalikan hasil database ini,ketika table bernama user,ketika kondisi isi di dalam argument/parameter $where
+    // kembalikan hasil database ini,ketika table bernama user,dimana kondisi = parameter $where
     return $this->db->get_where('user', $where);
   }
+
   // Fungsi getuserwhere(Parameter yang di cari)
   public function getUserWhere($where = null)
   {
-    // kembalikan hasil databse ini,ketika table bernama user,ketika kondisi $where
+    // kembalikan hasil databese ini,ketika table bernama user,ketika kondisi $where
     return $this->db->get_where('user', $where);
   }
   // fungsi cekuseracces (parameter yang di cari)
@@ -39,7 +40,7 @@ class ModelUser extends Ci_Model
     $this->db->select('*');
     // dari tabel user
     $this->db->from('user');
-    // limit 10
+    // limit 10 dari ke 0
     $this->db->limit(10, 0);
     // kembalikan hasil pemanggilan
     $this->db->get();
