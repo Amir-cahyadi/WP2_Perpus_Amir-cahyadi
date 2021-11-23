@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initialscale=1,shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <!-- cek controler admin  -->
   <title>pustaka-booking<?= $judul; ?></title>
   <!--Customfonts for this template-->
   <link href="<?= base_url('assets/'); ?>vendor/fontawesomefree/css/all.min.css" rel="stylesheet" type="text/css">

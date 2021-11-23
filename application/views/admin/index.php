@@ -10,7 +10,10 @@
             <div class="col mr-2">
               <div class="text-md font-weight-bold text-white text-uppercase mb-1">Jumlah Anggota</div>
               <!-- memanggil mode user fungsi getuserwhere  -->
-              <div class="h1 mb-0 font-weight-bold text-white"><?= $this->ModelUser->getUserWhere(['role_id' => 1])->num_rows(); ?> </div>
+              <div class="h1 mb-0 font-weight-bold text-white"><?= $this->ModelUser->getUserWhere(['role_id' => 1])
+                                                                  // mengecek jumlah baris dari hasil pemanggilan fungsi get user where di model user
+                                                                  // fungsi get user where = cari di table user ketika  role id = 1
+                                                                  ->num_rows(); ?> </div>
             </div>
             <div class="col-auto">
               <a href="<?= base_url('user/anggota'); ?>"><i class="fas fa-users fa-3x text-warning"></i></a>
@@ -31,6 +34,7 @@
 
               <div class="text-md font-weight-bold text-white text-uppercase mb-1">Stok Buku Terdaftar</div>
               <div class="h1 mb-0 font-weight-bold text-white">
+                <!-- ini berhubungan dengan $data di controler admin php -->
                 <?php $where = ['stok != 0'];
                 // memanggil model buku fungsi total (ambil dan tambahkan) 
                 // jika total stok tidak = 0 , panggil model buku fungsi total jika 0 lewatkan
@@ -53,6 +57,7 @@
             <div class="col mr-2">
               <div class="text-md font-weight-bold text-white text-uppercase mb-1">Buku yang dipinjam</div>
               <div class="h1 mb-0 font-weight-bold text-white">
+                <!-- ini berhubungan dengan $data di controler admin php -->
                 <?php $where = ['dipinjam != 0'];
                 // cek atas
                 $totaldipinjam = $this->ModelBuku->total('dipinjam', $where);
@@ -73,6 +78,7 @@
             <div class="col mr-2">
               <div class="text-md font-weight-bold text-white text-uppercase mb-1">Buku yang dibooking</div>
               <div class="h1 mb-0 font-weight-bold text-white">
+                <!-- ini berhubungan dengan $data di controler admin php -->
                 <?php $where = ['dibooking != 0'];
                 // cek atas
                 $totaldibooking = $this->ModelBuku > total('dibooking', $where);
@@ -97,6 +103,7 @@
     <div class="table-responsive table-bordered col-sm-5 ml-auto mr-auto mt-2">
       <div class="page-header">
         <span class="fas fa-users text-primary mt-2 "> Data User</span>
+        <!-- memanggil controler user -->
         <a class="text-danger" href="<?php echo base_url('user/data_user'); ?>"><i class="fas fa-search mt-2 floatright">
             Tampilkan</i></a>
       </div>
@@ -131,6 +138,7 @@
     <div class="table-responsive table-bordered col-sm-5 ml-auto mr-auto mt-2">
       <div class="page-header">
         <span class="fas fa-book text-warning mt-2"> Data Buku</span>
+        <!-- memanggil controler buku -->
         <a href="<?= base_url('buku'); ?>"><i class="fas fa-search text-primary mt-2 float-right">Tampilkan</i></a>
       </div>
       <div class="table-responsive">

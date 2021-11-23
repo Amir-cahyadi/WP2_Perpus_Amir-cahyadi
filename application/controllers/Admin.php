@@ -6,6 +6,7 @@ class Admin extends CI_Controller
   public function __construct()
   {
     parent::__construct();
+    // memanggil fungsi cek login di folder helper dengan nama pustaka_helper
     cek_login();
   }
 
@@ -18,6 +19,7 @@ class Admin extends CI_Controller
     $data['anggota'] = $this->ModelUser->getUserLimit() > result_array();
     // mengambil semua data buku di dalam database
     $data['buku'] = $this->ModelBuku->getBuku()->result_array();
+    // kirimkan hasil dari pemaangilan fungsi di atas ke yang di bawah
     $this->load->view('templates/header', $data);
     $this->load->view('templates/sidebar', $data);
     $this->load->view('templates/topbar', $data);

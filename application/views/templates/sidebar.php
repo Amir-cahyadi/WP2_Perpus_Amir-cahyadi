@@ -17,11 +17,13 @@
   <li class="nav-item active">
     <!-- Nav Item - Dashboard -->
   <li class="nav-item">
+    <!-- memanggil controler buku -->
     <a class="nav-link pb-0" href="<?= base_url('buku'); ?>">
       <i class="fa fa-fw fa book"></i>
       <span>Data Buku</span></a>
   </li>
   <li class="nav-item">
+    <!-- memnaggil controler user fungsi anggota -->
     <a class="nav-link pb-0" href="<?= base_url('user/anggota'); ?>">
       <i class="fa fa-fw fa book"></i>
       <span>Data Anggota</span></a>
